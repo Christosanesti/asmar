@@ -24,8 +24,8 @@ function Navbar() {
           </Link>
         </div>
         <div className="flex items-start justify-between">
-          <div className="grid grid-cols-2 w-full">
-            <div className="flex flex-col items-start">
+          <div className="grid grid-cols-2 w-full ">
+            <div className="md:flex md:flex-col items-start hidden">
               <Link className="hover:underline" href={"/"}>
                 درباره
               </Link>
@@ -36,7 +36,7 @@ function Navbar() {
                 دکترین تجاری
               </Link>
             </div>
-            <div className="flex flex-col items-start ">
+            <div className="md:flex flex-col items-start hidden ">
               <Link className="hover:underline" href={"/"}>
                 بازدهی
               </Link>
@@ -59,7 +59,7 @@ function Navbar() {
         variants={slidingMenu}
         initial="closed"
         animate={isMenuOpen ? "open" : "closed"}
-        className={`fixed z-[10] text-3xl font-sans bg-slate-300 text-black rounded-md  m-5 top-0 left-0 mx-3 `}
+        className={`fixed z-[10] text-3xl font-sans bg-slate-300 text-black rounded-md  m-5 top-0 left-0 p-2 sm:p-3 `}
       >
         <motion.div
           variants={slidingText}
@@ -68,37 +68,37 @@ function Navbar() {
           className=" flex-col justify-between h-full"
         >
           <div className="flex justify-between">
-            <button onClick={toggleMenu} className="flex">
+            <button onClick={toggleMenu} className="flex ">
               <X size={30} />
             </button>
-            <div className="flex flex-col items-end">
+            <div className="flex flex-col items-end sm:my-5">
               <Link
-                className="hover:underline tracking-tight font-sans text-3xl"
+                className="hover:underline tracking-tight font-sans text-lg md:text-2xl lg:text-4xl"
                 href={"/"}
               >
                 پروژه ها
               </Link>
               <Link
-                className="hover:underline tracking-tight font-sans text-3xl"
+                className="hover:underline tracking-tight font-sans text-lg md:text-2xl lg:text-4xl "
                 href={"/"}
               >
                 دکترین تجاری
               </Link>
               <Link
-                className="hover:underline tracking-tight font-sans text-3xl"
+                className="hover:underline tracking-tight font-sans text-lg md:text-2xl lg:text-4xl"
                 href={"/"}
               >
                 بازدهی
               </Link>
               <Link
-                className="hover:underline tracking-tight font-sans text-3xl"
+                className="hover:underline tracking-tight font-sans text-lg md:text-2xl lg:text-4xl"
                 href={"/"}
               >
                 بازار دیجیتال
               </Link>
             </div>
           </div>
-          <div dir="rtl" className="text-xl">
+          <div dir="rtl" className="text-sm md:text-xl ">
             <div className="grid grid-cols-2">
               <p className="opacity-40">توانایی</p>
               <div className="flex flex-col">

@@ -34,7 +34,7 @@ function Home() {
             variants={boxAnimation}
             initial="hidden"
             animate="visible"
-            className="flex flex-col text-7xl font-sans tracking-tight"
+            className="flex flex-col lg:text-7xl md:text-6xl text-4xl font-sans tracking-tight"
           >
             <motion.span variants={textAnimation}>موسسه</motion.span>
             <motion.span variants={textAnimation}>تجارت </motion.span>
