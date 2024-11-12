@@ -3,7 +3,10 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full grid grid-cols-2 p-5 px-6">
+    <nav
+      className="fixed top-0 left-0 w-full grid grid-cols-2 p-5 px-6 z-[3]"
+      dir="rtl"
+    >
       <div>
         <Link href={"/"} className="">
           آسمار
