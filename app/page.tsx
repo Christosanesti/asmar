@@ -9,6 +9,7 @@ import {
   textAnimation,
 } from "./animation/transition";
 import Link from "next/link";
+import ChatBot from "./components/shared/ChatBot";
 function Home() {
   return (
     <div className="min-h-screen overflow-hidden relative">

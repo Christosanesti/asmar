@@ -1,14 +1,17 @@
 "use client";
-import { Logs, X } from "lucide-react";
+import { Computer, Logs, X } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { slidingMenu, slidingText } from "@/app/animation/transition";
+import { AiFillWechat } from "react-icons/ai";
+import ChatBot from "./ChatBot";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  const [isAiChatOpen, setIsAiChatOpen] = useState(false); //
+  const toggleAiChat = () => setIsAiChatOpen(!isAiChatOpen);
   return (
     <>
       <motion.nav
@@ -48,7 +51,9 @@ function Navbar() {
               </Link>
             </div>
           </div>
-
+          <button onClick={toggleAiChat} className="px-4">
+            <AiFillWechat size={30} />
+          </button>
           <button onClick={toggleMenu}>
             <Logs size={30} />
           </button>
@@ -58,8 +63,29 @@ function Navbar() {
       <motion.div
         variants={slidingMenu}
         initial="closed"
+        animate={isAiChatOpen ? "open" : "closed"}
+        className={`fixed z-[10] text-3xl font-sans bg-gray-200 text-black rounded-md  m-5 top-0 left-0 p-2 sm:p-3 `}
+      >
+        <motion.div
+          variants={slidingText}
+          initial="open"
+          animate={isAiChatOpen ? "open" : "close"}
+          className=" flex-col justify-between h-full"
+        >
+          <button onClick={toggleAiChat} className="flex ">
+            <X size={30} />
+          </button>
+          <div className="flex justify-between">
+            <ChatBot />
+          </div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        variants={slidingMenu}
+        initial="closed"
         animate={isMenuOpen ? "open" : "closed"}
-        className={`fixed z-[10] text-3xl font-sans bg-slate-300 text-black rounded-md  m-5 top-0 left-0 p-2 sm:p-3 `}
+        className={`fixed z-[10] text-3xl font-sans bg-gray-200 text-black rounded-md  m-5 top-0 left-0 p-2 sm:p-3 `}
       >
         <motion.div
           variants={slidingText}
