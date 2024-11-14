@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/drei": "^9.116.0",
     "ai": "^3.4.33",
     "framer-motion": "^11.11.13",
     "groq-sdk": "^0.8.0",
+    "gsap": "^3.12.5",
     "next": "15.0.3",
     "openai": "^4.72.0",
     "react": "^18.3.1",
