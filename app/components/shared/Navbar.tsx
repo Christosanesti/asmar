@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { slidingMenu, slidingText } from "@/app/animation/transition";
-import { AiFillWechat } from "react-icons/ai";
 import ChatBot from "./ChatBot";
 
 function Navbar() {
@@ -52,7 +51,7 @@ function Navbar() {
             </div>
           </div>
           <button onClick={toggleAiChat} className="px-4">
-            <AiFillWechat size={30} />
+            <Computer size={30} />
           </button>
           <button onClick={toggleMenu}>
             <Logs size={30} />
