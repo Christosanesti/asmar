@@ -34,7 +34,7 @@ export const iconAnimation = {
 
 export const slidingMenu = {
   open: {
-    width: "60%",
+    width: "90%",
     height: "88%",
     display: "block",
     transition: { duration: 0.84, type: "spring", ease: "easeInOut" },
