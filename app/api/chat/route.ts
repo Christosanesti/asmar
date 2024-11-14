@@ -51,3 +51,5 @@
 // // }
 
 //^^^^ API FOR GROQ AI
+import React from "react";
+const hello = "hell world";
