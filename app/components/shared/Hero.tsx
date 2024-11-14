@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import bg from "/public/nack.jpg";
+import bg from "/public/neck.jpg";
 import { ArrowLeftSquare } from "lucide-react";
 import { easeInOut, motion } from "framer-motion";
 import {
